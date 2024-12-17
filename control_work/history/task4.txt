@@ -1,0 +1,84 @@
+wget -c http://ftp.ru.debian.org/debian/pool/main/n/nginx/nginx_1.22.1-9_amd64.deb                                     b
+--2024-11-19 18:31:34--  http://ftp.ru.debian.org/debian/pool/main/n/nginx/nginx_1.22.1-9_amd64.deb
+Распознаётся ftp.ru.debian.org (ftp.ru.debian.org)… 85.143.112.112
+Подключение к ftp.ru.debian.org (ftp.ru.debian.org)|85.143.112.112|:80... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 527396 (515K) [application/octet-stream]
+Сохранение в: ‘nginx_1.22.1-9_amd64.deb’
+
+nginx_1.22.1-9_amd64.deb      100%[=================================================>] 515,04K  --.-KB/s    за 0,02s   
+
+2024-11-19 18:31:35 (33,2 MB/s) - ‘nginx_1.22.1-9_amd64.deb’ сохранён [527396/527396]
+
+mihail@Ubunty:~/control_work/history$ wget -c http://ftp.ru.debian.org/debian/pool/main/n/nginx/nginx_1.22.1-9_amd64.deb
+--2024-11-19 18:31:46--  http://ftp.ru.debian.org/debian/pool/main/n/nginx/nginx_1.22.1-9_amd64.deb
+Распознаётся ftp.ru.debian.org (ftp.ru.debian.org)… 85.143.112.112
+Подключение к ftp.ru.debian.org (ftp.ru.debian.org)|85.143.112.112|:80... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 416 Requested Range Not Satisfiable
+
+    Файл уже полностью загружен; нечего выполнять.
+
+mihail@Ubunty:~/control_work/history$ sudo apt-get install -f
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 8 пакетов не обновлено.
+mihail@Ubunty:~/control_work/history$ sudo dpkg -r nginx nginx-common
+dpkg: предупреждение: игнорируется запрос на удаление неустановленного пакета nginx
+dpkg: предупреждение: игнорируется запрос на удаление неустановленного пакета nginx-common
+mihail@Ubunty:~/control_work/history$ sudo dpkg -i nginx_1.22.1-9_amd64.deb
+Выбор ранее не выбранного пакета nginx.
+(Чтение базы данных … на данный момент установлено 186585 файлов и каталогов.)
+Подготовка к распаковке nginx_1.22.1-9_amd64.deb …
+Распаковывается nginx (1.22.1-9) …
+dpkg: зависимости пакетов не позволяют настроить пакет nginx:
+ nginx зависит от nginx-common (<< 1.22.1-9.1~), однако:
+  Пакет nginx-common не установлен.
+ nginx зависит от nginx-common (>= 1.22.1-9), однако:
+  Пакет nginx-common не установлен.
+
+dpkg: ошибка при обработке пакета nginx (--install):
+ проблемы зависимостей — оставляем не настроенным
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+При обработке следующих пакетов произошли ошибки:
+ nginx
+mihail@Ubunty:~/control_work/history$ sudo apt-get install -f
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Исправление зависимостей… Готово
+Будут установлены следующие дополнительные пакеты:
+  nginx nginx-common
+Предлагаемые пакеты:
+  fcgiwrap nginx-doc
+Следующие НОВЫЕ пакеты будут установлены:
+  nginx-common
+Следующие пакеты будут обновлены:
+  nginx
+Обновлено 1 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 8 пакетов не обновлено.
+Установлено или удалено не до конца 1 пакетов.
+Необходимо скачать 552 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 234 kB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 nginx amd64 1.24.0-2ubuntu7.1 [521 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 nginx-common all 1.24.0-2ubuntu7.1 [31,2 kB]
+Получено 552 kB за 1с (1 003 kB/s)       
+Предварительная настройка пакетов …
+(Чтение базы данных … на данный момент установлен 186591 файл и каталог.)
+Подготовка к распаковке …/nginx_1.24.0-2ubuntu7.1_amd64.deb …
+Распаковывается nginx (1.24.0-2ubuntu7.1) на замену (1.22.1-9) …
+Выбор ранее не выбранного пакета nginx-common.
+Подготовка к распаковке …/nginx-common_1.24.0-2ubuntu7.1_all.deb …
+Распаковывается nginx-common (1.24.0-2ubuntu7.1) …
+Настраивается пакет nginx (1.24.0-2ubuntu7.1) …
+Настраивается пакет nginx-common (1.24.0-2ubuntu7.1) …
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
+Обрабатываются триггеры для ufw (0.36.2-6) …
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+mihail@Ubunty:~/control_work/history$ sudo dpkg -r nginx nginx-common
+(Чтение базы данных … на данный момент установлено 186632 файла и каталога.)
+Удаляется nginx-common (1.24.0-2ubuntu7.1) …
+Удаляется nginx (1.24.0-2ubuntu7.1) …
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+mihail@Ubunty:~/control_work/history$ 
+

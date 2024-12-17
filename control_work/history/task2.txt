@@ -1,0 +1,9 @@
+mkdir newdir
+mihail@Ubunty:~/control_work$ ls
+history  human_friends.txt  newdir  Pack_animals.txt  Pets.txt
+mihail@Ubunty:~/control_work$ mv human_friends.txt newdir/
+mihail@Ubunty:~/control_work$ ls
+history  newdir  Pack_animals.txt  Pets.txt
+mihail@Ubunty:~/control_work$ ls newdir/
+human_friends.txt
+mihail@Ubunty:~/control_work$ 

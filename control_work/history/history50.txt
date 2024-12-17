@@ -1,0 +1,48 @@
+    1  mkdir control_work
+    2  cd control_work/
+    3  cat Pets.txt
+    4  cat > Pets.txt
+    5  cat Pets.txt 
+    6  cat > Pack_animals.txt
+    7  cat Pack_animals.txt 
+    8  cat Pets.txt Pack_animals.txt > animals.txt
+    9  cat animals.txt 
+   10  mv animals.txt human_friend.txt
+   11  cat human_friend.txt 
+   12  mv human_friend.txt human_friends.txt 
+   13  cat human_friends.txt 
+   14  ls
+   15  mkdir history
+   16  cd history/
+   17  cat task1.txt
+   18  cat > task1.txt
+   19  cat task1.txt 
+   20  cd .
+   21  cd ..
+   22  mkdir newdir
+   23  ls
+   24  mv human_friends.txt newdir/
+   25  ls
+   26  ls newdir/
+   27  cd newdir/
+   28  cd ..
+   29  cd history/
+   30  cat > tasl2.txt
+   31  cat task2.txt
+   32  mv tasl2.txt task2.txt
+   33  ls
+   34  cat task2.txt
+   35  wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb
+   36  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+   37  sudo apt update
+   38  sudo apt install mysql-server
+   39  systemctl status mysql
+   40  cat > task3.txt
+   41  wget -c http://ftp.ru.debian.org/debian/pool/main/n/nginx/nginx_1.22.1-9_amd64.deb
+   42  sudo apt-get install -f
+   43  sudo dpkg -r nginx nginx-common
+   44  sudo dpkg -i nginx_1.22.1-9_amd64.deb
+   45  sudo apt-get install -f
+   46  sudo dpkg -r nginx nginx-common
+   47  cat > task4.txt
+   48  history 50 > history50.txt

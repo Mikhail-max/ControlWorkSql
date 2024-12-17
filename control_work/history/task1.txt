@@ -1,0 +1,63 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+mihail@Ubunty:~$ 
+mihail@Ubunty:~$ mkdir control_work
+mihail@Ubunty:~$ cd control_work/
+mihail@Ubunty:~/control_work$ cat Pets.txt
+cat: Pets.txt: Нет такого файла или каталога
+mihail@Ubunty:~/control_work$ cat > Pets.txt
+cat
+dog
+hamster
+mihail@Ubunty:~/control_work$ cat Pets.txt 
+cat
+dog
+hamster
+mihail@Ubunty:~/control_work$ cat > Pack_animals.txt
+horse    
+camel
+donkey
+mihail@Ubunty:~/control_work$ cat Pack_animals.txt 
+horse
+camel
+donkey
+mihail@Ubunty:~/control_work$ cat Pets.txt Pack_animals.txt > animals.txt
+mihail@Ubunty:~/control_work$ cat animals.txt 
+cat
+dog
+hamster
+horse
+camel
+donkey
+mihail@Ubunty:~/control_work$ mv animals.txt human_friend.txt
+mihail@Ubunty:~/control_work$ cat human_friend.txt 
+cat
+dog
+hamster
+horse
+camel
+donkey
+mihail@Ubunty:~/control_work$ mv human_friend.txt human_friends.txt 
+mihail@Ubunty:~/control_work$ cat human_friends.txt 
+cat
+dog
+hamster
+horse
+camel
+donkey
+mihail@Ubunty:~/control_work$ ls
+human_friends.txt  Pack_animals.txt  Pets.txt
+mihail@Ubunty:~/control_work$ mkdir history
+mihail@Ubunty:~/control_work$ cd history/
+mihail@Ubunty:~/control_work/history$ cat task1.txt
+cat: task1.txt: Нет такого файла или каталога
+mihail@Ubunty:~/control_work/history$ cat > task1.txt
+ls
+^Z
+[1]+  Остановлен    cat > task1.txt
+mihail@Ubunty:~/control_work/history$ cat > task1.txt
+mihail@Ubunty:~/control_work/history$ cat task1.txt 
+mihail@Ubunty:~/control_work/history$ ^C
+mihail@Ubunty:~/control_work/history$ 
+
